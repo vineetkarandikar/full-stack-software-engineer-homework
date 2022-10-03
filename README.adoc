@@ -1,0 +1,18 @@
+URL Shortener Demo Application
+
+--------------------------------------------------------------
+This project is used to create URL shortener from original URL to tiny URL.In this if same input is provided multiple time same tiny URL is generated.
+--------------------------------------
+
+
+Installation and Getting Started
+
+UnZip the code in you choice of IDE.This project has two components one is HTML/JQuery to get user input URL and post the input to spring boot enabled REST API.
+
+	1.To run the application for Front-End just open the HTML file i.e. index.html in browser.
+	2.run the mvn clean install in command prompt which will also run unit test.
+	3.After step 2 run mvn spring-boot:run
+	4.In browser open the URL for swagger --> http://localhost:8080/swagger-ui/#/
+	5.Test in swagger UI first for URL shortener.
+	6.Same thing you can test in index.html
+ 

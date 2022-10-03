@@ -1,0 +1,35 @@
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+<div class="row">
+    <div class="col-lg-6">
+        <div class="input-group"> <span class="input-group-btn">
+        <button class="Submit" id ="submit" type="button">Submit</button>
+      </span>	  
+      <input class="inputUrl" id="inputUrl" class="form-control" placeholder="enter the URL to be shortened">
+	   <input class="shortenedUrl" id="shortenedUrl" class="form-control" placeholder="shortened Url">
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$('.Submit').click(function() { 
+var name = $(".inputUrl").val();
+//alert (dataString);return false;
+$.ajax({
+    type: "POST",
+	contentType: "text/xml",
+    url: 'http://localhost:8080/v1/shortner/url',
+    data: name,
+	  error: function (request, error) {
+        console.log(arguments);
+        alert(" Can't do because: " + error);
+    },
+    success: function (data) {
+	console.log(data)
+		 $('.shortenedUrl').val(data);
+    }});
+	});
+</script>
+
+<div class="share-link well"></div>`
